@@ -13,7 +13,7 @@
   Selenium Plugin
 ===
 
-   ![AirFlow - Docker Container ecosystem](images/Airflow-DAG-Selenium-example-BBC-Radio5-wake-up-to-money-mp3-downlod-webscrapper.png )
+   ![AirFlow - Docker Container ecosystem](selenium-on-airflow-dag-automate-daily-job/images/Airflow-DAG-Selenium-example-BBC-Radio5-wake-up-to-money-mp3-downlod-webscrapper.png )
 
 
   Imap Plugin
