@@ -21,6 +21,10 @@
 
 The purpose of this plugin is to use the Internet Message Access Protocol (IMAP) to retrieve email messages from a given mail server.
 
+   ![Airflow - 'imap_default' Email WebScraper ](images/imap_default_imap_dag_email_webscraper.png)
+
+   ![Airflow - 'imap_default' configuration required ](images/default_imap_issue_configuration.png)
+
 ## Creating a connection
 
 To create an IMAP connection using the Airflow UI you need to open the interface > Admin dropdown menu > click on 'connections' > create. The connection needs to be of the form:
@@ -61,6 +65,10 @@ op.execute(context={'yesterday_ds': '2019-08-04'})
 
 ```
 
+  Requirements
+===
+   Setup your linux machine for [docker](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/my_docker_wsl/install-docker.sh)
+   Setup your linux machine for [docker-compose](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/my_docker_wsl/install-docker-compose.sh)
 
   Information in Article
 ===
