@@ -1,10 +1,9 @@
 
   Job execution Airflow DAG Selenium Webscaper
 ===
-   Run Job execution with selenium Dag using BBC Radio5 Wake-up-to-money mp3 podcast download as an webscraper example
+   Run Job and download mp3 content of podcast BBC_Radio5 Wake Up To Money
 
-
-     Execute installation with automated docker composer
+     Execute installation with automated docker-composer
 
         $ bash -x get-docker-compose-Selenium-executor.sh
 
