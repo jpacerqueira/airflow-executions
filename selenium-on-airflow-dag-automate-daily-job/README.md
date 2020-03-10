@@ -9,6 +9,10 @@
         $ bash -x get-docker-compose-Selenium-executor.sh
 
 
+
+  Selenium Plugin
+===
+
    ![AirFlow - Docker Container ecosystem](images/Airflow-DAG-Selenium-example-BBC-Radio5-wake-up-to-money-mp3-downlod-webscrapper.png )
 
 
