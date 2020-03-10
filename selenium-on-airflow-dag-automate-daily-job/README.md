@@ -21,7 +21,7 @@
 
 The purpose of this plugin is to use the Internet Message Access Protocol (IMAP) to retrieve email messages from a given mail server.
 
-   ![Airflow - 'imap_default' Email WebScraper ](images/imap_default_imap_dag_email_webscraper.png)
+   ![Airflow - 'imap_default' Email WebScraper ](images/imap_default_dag_email_webscraper.png)
 
    ![Airflow - 'imap_default' configuration required ](images/default_imap_issue_configuration.png)
 
