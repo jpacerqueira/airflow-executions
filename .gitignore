@@ -1,1 +1,2 @@
 selenium-on-airflow-dag-automate-daily-job/*/__pycache__/*.pyc
+selenium-on-airflow-dag-automate-daily-job/**/**/__pycache__/*.pyc
