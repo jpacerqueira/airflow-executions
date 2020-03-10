@@ -1,0 +1,7 @@
+
+#FROM selenium/standalone-chrome
+#RUN mkdir /home/seluser/downloads
+
+FROM selenium/standalone-chrome:3.141.59
+RUN mkdir /home/seluser/downloads
+
