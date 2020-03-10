@@ -67,8 +67,8 @@ op.execute(context={'yesterday_ds': '2019-08-04'})
 
   Requirements
 ===
-   Setup your linux machine for [docker](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/my_docker_wsl/install-docker.sh)
-   Setup your linux machine for [docker-compose](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/my_docker_wsl/install-docker-compose.sh)
+   Setup your linux machine follow links for [docker](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/my_docker_wsl/install-docker.sh)
+   and [docker-compose](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/my_docker_wsl/install-docker-compose.sh)
 
   Information in Article
 ===
