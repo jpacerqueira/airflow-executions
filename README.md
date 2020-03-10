@@ -12,7 +12,7 @@
   Selenium Plugin
 ===
 
-   ![AirFlow - Docker Container ecosystem](selenium-on-airflow-dag-automate-daily-job/images/Airflow-DAG-Selenium-example-BBC-Radio5-wake-up-to-money-mp3-downlod-webscrapper.png )
+   ![AirFlow - Docker Container ecosystem](airflow-dag-automate-daily-jobs-selenium/images/Airflow-DAG-Selenium-example-BBC-Radio5-wake-up-to-money-mp3-downlod-webscrapper.png )
 
 
   Imap Plugin
@@ -20,9 +20,9 @@
 
 The purpose of this plugin is to use the Internet Message Access Protocol (IMAP) to retrieve email messages from a given mail server.
 
-   ![Airflow - 'imap_default' Email WebScraper ](selenium-on-airflow-dag-automate-daily-job/images/imap_default_dag_email_webscraper.png)
+   ![Airflow - 'imap_default' Email WebScraper ](airflow-dag-automate-daily-jobs-selenium/images/imap_default_dag_email_webscraper.png)
                                                 
-   ![Airflow - 'imap_default' configuration required ](selenium-on-airflow-dag-automate-daily-job/images/default_imap_issue_configuration.png)
+   ![Airflow - 'imap_default' configuration required ](airflow-dag-automate-daily-jobs-selenium/images/default_imap_issue_configuration.png)
 
 
 ## Creating a connection
