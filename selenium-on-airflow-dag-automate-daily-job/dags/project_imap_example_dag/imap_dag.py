@@ -18,25 +18,48 @@ class ExtendedPythonOperator(PythonOperator):
     get processed for the op_kwargs field.
     '''
     template_fields = ('templates_dict', 'op_kwargs')
-#
-#
+
+
+def weekday_branch():
+    '''
+    Returns task_id based on day of weekend only.
+    '''
+    if datetime.today().weekday() in range(0, 6):
+        return 'get_op'
+    else:
+        return 'end'
+
+date = '{{ ds_nodash }}'
+
+
 default_args = {
     'owner': 'github_user',
-    # 'wait_for_downstream': True,
-    'start_date': datetime(2019, 10, 8),
-    'end_date': datetime(2019, 10, 20),
+    'wait_for_downstream': True, # was commented before - JPAC
+    'start_date': datetime(2020, 3, 9),
+    'end_date': datetime(2020, 3, 19),
     'retries': 3,
     'retries_delay': timedelta(minutes=5)
     }
-#
+
+yesterday = (datetime.now() - timedelta(days=1)) # .strftime('%yyyy%m%d')
+
 dag = DAG('imap_daily_download_emails_example_dag',
           schedule_interval='0 7 * * *',
-          default_args=default_args)
-#
+          default_args=default_args,
+          start_date=yesterday)
+
+start = DummyOperator(
+    task_id='start',
+    dag=dag)
+
+weekday_branch = BranchPythonOperator(
+    python_callable=weekday_branch,
+    task_id='weekday_branch',
+    dag=dag)
+
 hook = IMAPHook(imap_conn_id='imap_default')
-#
-#
-op = IMAPAttachmentOperator(
+
+get_op = IMAPAttachmentOperator(
     imap_conn_id='imap_default',
     mailbox='mail_test',
     search_criteria={"FROM": "noreply@example.com",
@@ -44,6 +67,15 @@ op = IMAPAttachmentOperator(
     local_path='',
     file_name='',
     task_id='imap_example')
-#
-op.execute(context={'yesterday_ds': '2020-03-09'})
-#
+
+end = DummyOperator(
+    task_id='end',
+    dag=dag)
+
+start >> weekday_branch
+weekday_branch >> get_op
+get_op >> end
+weekday_branch >> end
+
+#get_op.execute(context={'yesterday_ds': '2020-03-09'})
+

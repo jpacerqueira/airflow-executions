@@ -58,8 +58,8 @@ local_downloads = os.path.join(cwd, 'downloads')
 default_args = {
     'owner': 'github_user',
     # 'wait_for_downstream': True,
-    'start_date': datetime(2019, 10, 8),
-    'end_date': datetime(2019, 10, 20),
+    'start_date': datetime(2020, 3, 9),
+    'end_date': datetime(2020, 3, 19),
     'retries': 3,
     'retries_delay': timedelta(minutes=5)
     }
