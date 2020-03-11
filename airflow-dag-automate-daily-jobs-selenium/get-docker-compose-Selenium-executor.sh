@@ -5,6 +5,7 @@
 #sudo mkdir -p /usr/local/airflow/dags
 #sudo mkdir -p /usr/local/airflow/plugins
 #sudo mkdir -p /usr/local/airflow/downloads
+#sudo mkdir -p /usr/local/airflow/logs
 #sudo mkdir -p /usr/local/airflow/selenium_scripts
 #
 docker build -t docker_airflow -f Dockerfile-airflow .
