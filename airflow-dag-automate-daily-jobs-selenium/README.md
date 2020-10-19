@@ -6,7 +6,7 @@
 
      Execute installation with automated docker composer
 
-        $ bash -x get-docker-compose-Selenium-executor.sh
+        $ bash -x execute-Airflow-Selenium-DAG-docker_compose-executor.sh
 
 
 

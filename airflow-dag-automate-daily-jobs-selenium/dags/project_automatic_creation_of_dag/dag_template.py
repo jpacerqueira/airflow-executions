@@ -28,30 +28,32 @@ from airflow.utils.trigger_rule import TriggerRule
 from airflow.models import Variable
 
 logger = logging.getLogger(__name__)
-LOCAL_TZ = timezone('Australia/Sydney')
+LOCAL_TZ = timezone('Europe/London')
 utc = timezone('UTC')
 today = dt.datetime.now().replace(tzinfo=utc).astimezone(LOCAL_TZ)
 yesterday = today - dt.timedelta(days=1)
 
-# dag_start_sate = yesterday
-# LAST_SAVE_DATE = datetime.strptime(Variable.get("dag_start_date"), '%Y-%m-%d')
+
+
+dag_start_date = yesterday  ## variable declared
+LAST_SAVE_DATE = datetime.strptime(Variable.get(dag_start_date), '%Y-%m-%d') ##
 
 args = {
     'owner': 'jpacerqueira',
     'depends_on_past': False,
     'catchup': False,
-    'start_date': yesterday,  # LAST_SAVE_DATE,
-    'email': ['xxx@yyy.com'],
+    'start_date':  LAST_SAVE_DATE, # yesterday,  #
+    'email': ['joao@fuelbigdata.com'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 0,
     'provide_context': True,
-    'retry_delay': timedelta(minutes=2)
+    'retry_delay': timedelta(minutes=15)
 }
 
 PARENT_DAG_NAME = '___DAG_ID___'
 
-dag_config = Variable.get("app_web_module_conversion_config", deserialize_json=True)
+dag_config = Variable.get("app_modules_daily_users_config", deserialize_json=True)
 LOOK_BACK_DAYS = dt.datetime.now() - dt.timedelta(
     days=int(dag_config["module_conversion_look_back_days"]))
 

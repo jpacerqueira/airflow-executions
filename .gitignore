@@ -1,4 +1,4 @@
-selenium-on-airflow-dag-automate-daily-job/*/__pycache__/*.pyc
-selenium-on-airflow-dag-automate-daily-job/**/**/__pycache__/*.pyc
+airflow-dag-automate-daily-jobs-selenium/*/__pycache__/*.pyc
+airflow-dag-automate-daily-jobs-selenium/*/*/__pycache__/*.pyc
 .DS_Store
 .idea/
