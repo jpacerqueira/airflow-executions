@@ -33,8 +33,14 @@ utc = timezone('UTC')
 today = dt.datetime.now().replace(tzinfo=utc).astimezone(LOCAL_TZ)
 yesterday = today - dt.timedelta(days=1)
 
-yesterday = dt.datetime.now() - dt.timedelta(days = 1)
-
+###### ERRROR TO FIX ###
+# postgres_1   | ERROR:  operator does not exist: character varying = timestamp with time zone at character 178
+# postgres_1   | HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+# postgres_1   | STATEMENT:  SELECT variable.val AS variable_val, variable.id AS variable_id, variable.key AS variable_key, variable.is_encrypted AS variable_is_encrypted
+# postgres_1   | 	FROM variable
+# postgres_1   | 	WHERE variable.key = '2020-10-18T13:05:02.140136+01:00'::timestamptz
+# postgres_1   | 	 LIMIT 1
+###### ERROR TO FIX ###
 
 dag_start_date = yesterday  ## variable declared
 LAST_SAVE_DATE = datetime.strptime(Variable.get(dag_start_date), '%Y-%m-%d') ##
