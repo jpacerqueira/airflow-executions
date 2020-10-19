@@ -18,7 +18,7 @@ from airflow.models import Variable
 
 logger = logging.getLogger(__name__)
 LOCAL_TZ = timezone('Europe/London')
-utc = timezone('UTC')
+utc = timezone('utc')
 today = dt.datetime.now().replace(tzinfo=utc).astimezone(LOCAL_TZ)
 yesterday = today - dt.timedelta(days=1)
 

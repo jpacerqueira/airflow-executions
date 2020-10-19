@@ -33,6 +33,7 @@ utc = timezone('UTC')
 today = dt.datetime.now().replace(tzinfo=utc).astimezone(LOCAL_TZ)
 yesterday = today - dt.timedelta(days=1)
 
+yesterday = dt.datetime.now() - dt.timedelta(days = 1)
 
 
 dag_start_date = yesterday  ## variable declared
